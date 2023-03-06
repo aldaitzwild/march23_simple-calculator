@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <script>
+        const firstValue = prompt("Renseignez une 1ere valeur :");
+        const operator = prompt("Renseignez un opérateur :");
+        const secondValue = prompt("Renseignez une 2nde valeur :");
+
+        const firstInt = parseInt(firstValue);
+        const secondInt = parseInt(secondValue);
+
+        let result;
+
+        //Solution 1
+        /*
+        if (operator === "+") {
+            result = firstInt + secondInt;
+        } else if (operator === "-") {
+            result = firstInt - secondInt;
+        } else if (operator === "*") {
+            result = firstInt * secondInt;
+        } else if (operator === "/") {
+            result = firstInt / secondInt;
+        } else {
+            result = "Invalid operator";
+        }
+        */
+
+        //Solution 1 bis
+        /*if (operator === "+") result = firstInt + secondInt;
+        else if (operator === "-") result = firstInt - secondInt;
+        else if (operator === "*") result = firstInt * secondInt;
+        else if (operator === "/") result = firstInt / secondInt;
+        else result = "Invalid Operator";*/
+
+        switch(operator)
+        {
+            case "+" :
+                result = firstInt + secondInt;
+                break;
+
+            case "-" :
+                result = firstInt - secondInt;
+                break;
+
+            case "*" :
+                result = firstInt * secondInt;
+                break;
+
+            case "/" :
+                result = firstInt / secondInt;
+                break;
+
+            default : 
+                result = "Invalid operator";
+                break;
+        }
+
+        console.log(result);
+    </script>
+</body>
+</html>
